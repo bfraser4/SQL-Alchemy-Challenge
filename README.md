@@ -1,34 +1,20 @@
-# Unit 10 Homework: Surf’s Up
-
-## Before You Begin
-
-1. Create a new repository for this project called `sqlalchemy-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
-
-4. Push the changes to GitHub or GitLab.
-
-![surfs-up.png](Images/surfs-up.png)
-
-## Instructions
-
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following sections outline the steps you must take to accomplish this task.
+# SQLAlchemy Climate Analysis 
 
 ### Part 1: Climate Analysis and Exploration
 
 In this section, you’ll use Python and SQLAlchemy to perform basic climate analysis and data exploration of your climate database. Complete the following tasks by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
-
 * Use SQLAlchemy’s `create_engine` to connect to your SQLite database.
+
+![carbon (11)](https://user-images.githubusercontent.com/107604123/215658367-0968607b-f81e-4ad8-bc61-c949bb3d4078.png)
 
 * Use SQLAlchemy’s `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
 
+![carbon (12)](https://user-images.githubusercontent.com/107604123/215658510-fedb835c-2515-420c-9f94-c11b294d4e4e.png)
+
 * Link Python to the database by creating a SQLAlchemy session.
 
-* **Important:** Don't forget to close out your session at the end of your notebook.
+![carbon (13)](https://user-images.githubusercontent.com/107604123/215658597-cf568173-bd1a-46c0-8518-0e04cd660d53.png)
 
 #### Precipitation Analysis
 
@@ -36,19 +22,23 @@ To perform an analysis of precipitation in the area, do the following:
 
 * Find the most recent date in the dataset.
 
-* Using this date, retrieve the previous 12 months of precipitation data by querying the 12 previous months of data. **Note:** Do not pass in the date as a variable to your query.
+![carbon (14)](https://user-images.githubusercontent.com/107604123/215658674-673272e9-3d80-45fc-b0cd-b6db261b193e.png)
 
-* Select only the `date` and `prcp` values.
+* Using this date, retrieve the previous 12 months of precipitation data by querying the 12 previous months of data. Select only the `date` and `prcp` values.
 
-* Load the query results into a Pandas DataFrame, and set the index to the date column.
+![carbon (15)](https://user-images.githubusercontent.com/107604123/215658910-384dea55-2348-487a-9d9f-ca2056ae4b77.png)
 
-* Sort the DataFrame values by `date`.
+* Load the query results into a Pandas DataFrame, and set the index to the date column. Sort the DataFrame values by `date`.
 
-* Plot the results by using the DataFrame `plot` method, as shown in the following image:
+![carbon (16)](https://user-images.githubusercontent.com/107604123/215658963-ffeb7e95-3818-4976-ad2d-eea1859e1eca.png)
 
-  ![precipitation](Images/precipitation.png)
+* Plot the results by using the DataFrame `plot` method.
+
+![carbon (17)](https://user-images.githubusercontent.com/107604123/215659018-b3ba07ce-05f5-45b3-b7c7-4534455eaeb3.png)
 
 * Use Pandas to print the summary statistics for the precipitation data.
+
+/Users/brittanieocampo/Desktop/DATA/SQL-Alchemy-Challenge/Images/precip.png
 
 #### Station Analysis
 
